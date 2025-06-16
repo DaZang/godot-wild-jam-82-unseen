@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=9 format=3 uid="uid://7fkam3v6qs6"]
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://7fkam3v6qs6"]
 
 [ext_resource type="StyleBox" uid="uid://drjwy0obuqhia" path="res://ui/ui_background_style_box_flat.tres" id="1_6awud"]
 [ext_resource type="FontFile" uid="uid://bfshk0y26maw8" path="res://ui/fonts/m5x7.ttf" id="1_yx2dc"]
@@ -24,6 +24,17 @@ content_margin_right = 5.0
 content_margin_bottom = 5.0
 bg_color = Color(0.0823529, 0.113725, 0.156863, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bd1ec"]
+bg_color = Color(0.247059, 0.14902, 0.192157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bkxsc"]
+bg_color = Color(0.262745, 0.882353, 0.701961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.247059, 0.14902, 0.192157, 1)
+
 [resource]
 default_font = ExtResource("1_yx2dc")
 default_font_size = 16
@@ -43,4 +54,6 @@ DragButton/styles/hover = SubResource("StyleBoxEmpty_k3upm")
 DragButton/styles/normal = SubResource("StyleBoxEmpty_bd1ec")
 DragButton/styles/pressed = SubResource("StyleBoxEmpty_bkxsc")
 Panel/styles/panel = SubResource("StyleBoxFlat_kf50m")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_bd1ec")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_bkxsc")
 RichTextLabel/font_sizes/normal_font_size = 32

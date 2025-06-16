@@ -1,12 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgm7p5lm400is"]
+[gd_scene load_steps=7 format=3 uid="uid://dgm7p5lm400is"]
 
 [ext_resource type="Script" uid="uid://be37bdunkgo2t" path="res://entities/hero/hero.gd" id="1_er2o3"]
 [ext_resource type="Texture2D" uid="uid://c0ocjoa2veaoy" path="res://tilemap_packed.png" id="2_23kmh"]
+[ext_resource type="PackedScene" uid="uid://c1nox6x4jf5pr" path="res://entities/health_component.tscn" id="3_s8sb5"]
+[ext_resource type="Theme" uid="uid://7fkam3v6qs6" path="res://ui/pixel_ui_theme.tres" id="4_kaf33"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qerkk"]
 radius = 4.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_s8sb5"]
+radius = 6.0
+
 [node name="Hero" type="CharacterBody2D" groups=["hero"]]
+collision_layer = 2
 script = ExtResource("1_er2o3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -19,3 +25,30 @@ frame = 97
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2)
 shape = SubResource("CircleShape2D_qerkk")
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_s8sb5")]
+unique_name_in_owner = true
+
+[node name="HurtArea2D" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtArea2D"]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_s8sb5")
+
+[node name="DamageIntervalTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.5
+one_shot = true
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -16.0
+offset_top = -24.0
+offset_right = 16.0
+offset_bottom = -18.0
+theme = ExtResource("4_kaf33")
+value = 50.0
+show_percentage = false

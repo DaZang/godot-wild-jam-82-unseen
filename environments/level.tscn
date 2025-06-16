@@ -171,3 +171,12 @@ hero = NodePath("../Entities/Hero")
 
 [node name="Hero" parent="Entities" instance=ExtResource("2_qerkk")]
 position = Vector2(550, 340)
+
+[node name="RatEnemy" parent="Entities" instance=ExtResource("5_kmher")]
+position = Vector2(709, 317)
+
+[node name="RatEnemy2" parent="Entities" instance=ExtResource("5_kmher")]
+position = Vector2(705, 363)
+
+[node name="RatEnemy3" parent="Entities" instance=ExtResource("5_kmher")]
+position = Vector2(737, 340)

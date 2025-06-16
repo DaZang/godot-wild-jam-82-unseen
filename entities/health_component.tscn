@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://c1nox6x4jf5pr"]
+[gd_scene load_steps=2 format=3 uid="uid://c1nox6x4jf5pr"]
+
+[ext_resource type="Script" uid="uid://d2g43t2ghr32x" path="res://entities/health_component.gd" id="1_rgctf"]
 
 [node name="HealthComponent" type="Node"]
+script = ExtResource("1_rgctf")
+
+[node name="DamageIntervalTimer" type="Timer" parent="."]

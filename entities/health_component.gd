@@ -21,7 +21,7 @@ func damage(damage_amount: float):
 func get_health_percent():
 	if max_health <= 0:
 		return 0
-	return min(current_health / max_health, 1)
+	return min(current_health / max_health, 1) * 100
 
 
 func check_death():

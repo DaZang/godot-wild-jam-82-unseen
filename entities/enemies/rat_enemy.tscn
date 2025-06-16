@@ -1,14 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://dwiphkghmc054"]
+[gd_scene load_steps=5 format=3 uid="uid://dwiphkghmc054"]
 
 [ext_resource type="Script" uid="uid://dbx80o7yc507t" path="res://entities/enemies/rat_enemy.gd" id="1_17qpt"]
 [ext_resource type="Texture2D" uid="uid://bgo0avcv2w20o" path="res://entities/enemies/rat_enemy.png" id="1_s8ari"]
 [ext_resource type="PackedScene" uid="uid://c1nox6x4jf5pr" path="res://entities/health_component.tscn" id="3_0xmro"]
-[ext_resource type="Script" uid="uid://d2g43t2ghr32x" path="res://entities/health_component.gd" id="4_q0ekb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s8ari"]
 radius = 4.0
 
 [node name="RatEnemy" type="CharacterBody2D"]
+collision_layer = 8
 script = ExtResource("1_17qpt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -20,4 +20,3 @@ position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_s8ari")
 
 [node name="HealthComponent" parent="." instance=ExtResource("3_0xmro")]
-script = ExtResource("4_q0ekb")
