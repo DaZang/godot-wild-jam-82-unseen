@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://76demrrp7djb"]
+
+[ext_resource type="Script" uid="uid://df8euw7plrnxg" path="res://entities/spells/lightning_spell.gd" id="1_4pui2"]
+[ext_resource type="PackedScene" uid="uid://ccpuo6i8pp5th" path="res://entities/hitbox_component.tscn" id="1_dtx0l"]
+[ext_resource type="Texture2D" uid="uid://c0ocjoa2veaoy" path="res://tilemap_packed.png" id="3_ojm6k"]
+
+[node name="LightningSpell" type="Node2D"]
+script = ExtResource("1_4pui2")
+
+[node name="HitboxComponent" parent="." instance=ExtResource("1_dtx0l")]
+damage = 10
+
+[node name="SpellDurationTimer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="LightingSprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_ojm6k")
+hframes = 12
+vframes = 11
+frame = 130
+
+[connection signal="timeout" from="SpellDurationTimer" to="." method="_on_spell_duration_timer_timeout"]

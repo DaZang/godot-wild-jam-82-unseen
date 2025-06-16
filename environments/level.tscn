@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://bx548ebid5r8x"]
+[gd_scene load_steps=9 format=4 uid="uid://bx548ebid5r8x"]
 
 [ext_resource type="Texture2D" uid="uid://c0ocjoa2veaoy" path="res://tilemap_packed.png" id="1_rn1uv"]
 [ext_resource type="PackedScene" uid="uid://dgm7p5lm400is" path="res://entities/hero/hero.tscn" id="2_qerkk"]
 [ext_resource type="PackedScene" uid="uid://c2s33a54tya55" path="res://game_camera_2d.tscn" id="3_qerkk"]
 [ext_resource type="PackedScene" uid="uid://dt8yt77lmypr1" path="res://entities/enemies/enemy_manager.tscn" id="4_hg43l"]
 [ext_resource type="PackedScene" uid="uid://dwiphkghmc054" path="res://entities/enemies/rat_enemy.tscn" id="5_kmher"]
+[ext_resource type="PackedScene" uid="uid://dp11k3jdjlbum" path="res://entities/spell_manager.tscn" id="5_uqs87"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eepu7"]
 texture = ExtResource("1_rn1uv")
@@ -166,6 +167,8 @@ hero = NodePath("../Entities/Hero")
 [node name="EnemyManager" parent="." node_paths=PackedStringArray("hero") instance=ExtResource("4_hg43l")]
 basic_enemy_scene = ExtResource("5_kmher")
 hero = NodePath("../Entities/Hero")
+
+[node name="SpellManager" parent="." instance=ExtResource("5_uqs87")]
 
 [node name="Entities" type="Node2D" parent="." groups=["entities_node"]]
 
