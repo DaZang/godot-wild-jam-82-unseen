@@ -1,13 +1,13 @@
 extends CharacterBody2D
 
-const MAX_SPEED = 40
+const MAX_SPEED = 2500
 
 @onready var health_component: HealthComponent = $HealthComponent
 
 
-func _process(delta):
+func _process(_delta):
 	var direction = get_direction_to_player()
-	velocity = direction * MAX_SPEED
+	velocity = direction * MAX_SPEED * _delta
 	move_and_slide()
 
 func get_direction_to_player():

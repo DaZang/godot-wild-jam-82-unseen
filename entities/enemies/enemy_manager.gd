@@ -13,7 +13,6 @@ func _ready():
 	
 	
 func on_timer_timeout():
-	var hero = get_tree().get_first_node_in_group("hero") as Hero
 	if hero == null:
 		return
 	
