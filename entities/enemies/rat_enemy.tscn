@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwiphkghmc054"]
+[gd_scene load_steps=6 format=3 uid="uid://dwiphkghmc054"]
 
 [ext_resource type="Script" uid="uid://dbx80o7yc507t" path="res://entities/enemies/rat_enemy.gd" id="1_17qpt"]
 [ext_resource type="Texture2D" uid="uid://bgo0avcv2w20o" path="res://entities/enemies/rat_enemy.png" id="1_s8ari"]
 [ext_resource type="PackedScene" uid="uid://c1nox6x4jf5pr" path="res://entities/health_component.tscn" id="3_0xmro"]
+[ext_resource type="PackedScene" uid="uid://oe8k1f5ymcg4" path="res://entities/hurtbox_component.tscn" id="4_0xmro"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s8ari"]
 radius = 4.0
@@ -20,3 +21,8 @@ position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_s8ari")
 
 [node name="HealthComponent" parent="." instance=ExtResource("3_0xmro")]
+unique_name_in_owner = true
+
+[node name="HurtboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_0xmro")]
+position = Vector2(0, -5)
+health_component = NodePath("../HealthComponent")

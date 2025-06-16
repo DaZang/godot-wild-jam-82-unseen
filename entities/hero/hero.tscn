@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dgm7p5lm400is"]
+[gd_scene load_steps=8 format=3 uid="uid://dgm7p5lm400is"]
 
 [ext_resource type="Script" uid="uid://be37bdunkgo2t" path="res://entities/hero/hero.gd" id="1_er2o3"]
 [ext_resource type="Texture2D" uid="uid://c0ocjoa2veaoy" path="res://tilemap_packed.png" id="2_23kmh"]
 [ext_resource type="PackedScene" uid="uid://c1nox6x4jf5pr" path="res://entities/health_component.tscn" id="3_s8sb5"]
 [ext_resource type="Theme" uid="uid://7fkam3v6qs6" path="res://ui/pixel_ui_theme.tres" id="4_kaf33"]
+[ext_resource type="PackedScene" uid="uid://ccpuo6i8pp5th" path="res://entities/hitbox_component.tscn" id="5_epm60"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qerkk"]
 radius = 4.0
@@ -52,3 +53,7 @@ offset_bottom = -18.0
 theme = ExtResource("4_kaf33")
 value = 50.0
 show_percentage = false
+
+[node name="HitboxComponent" parent="." instance=ExtResource("5_epm60")]
+position = Vector2(0, -6)
+damage = 10
