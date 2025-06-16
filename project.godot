@@ -30,6 +30,7 @@ window/stretch/mode="canvas_items"
 [global_group]
 
 entities_node="the node that holds all entities in a level"
+hero="the hero of the game"
 
 [input]
 
