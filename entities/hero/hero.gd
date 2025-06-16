@@ -1,0 +1,2 @@
+class_name Hero
+extends CharacterBody2D

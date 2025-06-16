@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgm7p5lm400is"]
+
+[ext_resource type="Script" uid="uid://be37bdunkgo2t" path="res://entities/hero/hero.gd" id="1_er2o3"]
+[ext_resource type="Texture2D" uid="uid://c0ocjoa2veaoy" path="res://tilemap_packed.png" id="2_23kmh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qerkk"]
+radius = 4.0
+
+[node name="Hero" type="CharacterBody2D"]
+script = ExtResource("1_er2o3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+texture = ExtResource("2_23kmh")
+hframes = 12
+vframes = 11
+frame = 97
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_qerkk")
