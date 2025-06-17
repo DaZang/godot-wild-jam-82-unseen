@@ -1,18 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://vagdjdb0eele"]
+[gd_scene load_steps=6 format=3 uid="uid://vagdjdb0eele"]
 
 [ext_resource type="Script" uid="uid://wicebpw6m6bf" path="res://game.gd" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://djd44gat0ahp5" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://bx548ebid5r8x" path="res://environments/level1.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://cxh2h8uhqy2xg" path="res://ui/pause_menu_ui.tscn" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://5eah0b8886w2" path="res://ui/fail_screen_ui.tscn" id="3_lquwl"]
 
 [node name="Main" type="Node2D"]
 process_mode = 3
 script = ExtResource("1_h2yge")
 
 [node name="HudCanvasLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
 
 [node name="PauseMenuUi" parent="HudCanvasLayer" instance=ExtResource("2_1bvp3")]
 unique_name_in_owner = true
+visible = false
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 0.0
@@ -20,9 +23,13 @@ offset_bottom = 0.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
+[node name="FailScreenUi" parent="HudCanvasLayer" instance=ExtResource("3_lquwl")]
+unique_name_in_owner = true
+visible = false
+
 [node name="Game" type="Node2D" parent="."]
 unique_name_in_owner = true
 process_mode = 1
 script = ExtResource("1_0xm2m")
 
-[node name="Level" parent="Game" groups=["environments"] instance=ExtResource("1_ig7tw")]
+[node name="Level" parent="Game" instance=ExtResource("1_ig7tw")]

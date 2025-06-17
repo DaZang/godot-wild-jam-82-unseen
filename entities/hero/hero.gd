@@ -16,7 +16,7 @@ func _ready() -> void:
 	hurt_area_2d.body_exited.connect(on_body_exited)
 	damage_interval_timer.timeout.connect(on_damage_interval_timer_timeout)
 	health_component.health_changed.connect(on_health_changed)
-	health_component.died.connect(func(): )
+	health_component.died.connect(GameEvents.emit_level_failed)
 	update_health_display()
 
 
