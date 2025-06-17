@@ -16,6 +16,7 @@ func _ready() -> void:
 	hurt_area_2d.body_exited.connect(on_body_exited)
 	damage_interval_timer.timeout.connect(on_damage_interval_timer_timeout)
 	health_component.health_changed.connect(on_health_changed)
+	health_component.died.connect(func(): )
 	update_health_display()
 
 
@@ -29,7 +30,6 @@ func check_deal_damage():
 		return
 	health_component.damage(1)
 	damage_interval_timer.start()
-	print(health_component.current_health)
 
 
 func on_body_entered(_other_body: Node2D):
@@ -43,6 +43,7 @@ func on_body_exited(_other_body: Node2D):
 	
 func on_damage_interval_timer_timeout():
 	check_deal_damage()
+
 
 func on_health_changed():
 	update_health_display()

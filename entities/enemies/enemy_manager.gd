@@ -5,7 +5,7 @@ const SPAWN_RADIUS = 500
 @export var basic_enemy_scene: PackedScene
 @export var hero: Hero 
 
-@onready var spawn_timer: Timer = $SpawnTimer
+@onready var spawn_timer: Timer = %SpawnTimer
 
 
 func _ready():
