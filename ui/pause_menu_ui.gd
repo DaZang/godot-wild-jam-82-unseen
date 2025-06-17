@@ -4,6 +4,8 @@ extends Control
 @onready var game_speed_slider: HSlider = %GameSpeedSlider
 @onready var music_slider: HSlider = %MusicSlider
 @onready var sfx_slider: HSlider = %SfxSlider
+@onready var restart_level_button: Button = %RestartLevelButton
+@onready var continue_button: Button = %ContinueButton
 
 
 func _ready() -> void:
