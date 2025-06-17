@@ -11,4 +11,5 @@ collision_mask = 0
 script = ExtResource("1_wf2kf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
 shape = SubResource("CircleShape2D_33bqi")
