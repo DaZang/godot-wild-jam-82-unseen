@@ -41,4 +41,4 @@ position = Vector2(705, 363)
 position = Vector2(737, 340)
 
 [node name="FinishLevelArea" parent="." instance=ExtResource("8_eb0c7")]
-position = Vector2(581, 339)
+position = Vector2(580, 338)

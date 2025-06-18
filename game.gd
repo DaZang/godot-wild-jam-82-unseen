@@ -6,10 +6,6 @@ signal game_completed
 var current_level_id = "1"
 
 
-func _ready():
-	GameEvents.level_completed.connect(on_level_completed)
-
-
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("load_level_1"):
 		load_level("1")
@@ -30,7 +26,11 @@ func load_level(level_id: String):
 	call_deferred("add_child", new_level)
 	call_deferred("move_child", new_level, 0)
 	current_level_id = level_id
+	
+	
+func restart_level():
+	load_level(current_level_id)
 
 
-func on_level_completed():
+func load_next_level():
 	load_level(str(current_level_id.to_int() + 1))

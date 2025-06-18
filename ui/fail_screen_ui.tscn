@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://5eah0b8886w2"]
 
-[ext_resource type="Theme" uid="uid://c78tfrjryojg6" path="res://ui/ui_theme.tres" id="1_owvsd"]
+[ext_resource type="Theme" uid="uid://7fkam3v6qs6" path="res://ui/pixel_ui_theme.tres" id="1_owvsd"]
 [ext_resource type="Script" uid="uid://ssn6t5m7bxnk" path="res://ui/fail_screen_ui.gd" id="2_pbnsu"]
 
 [node name="FailScreenUi" type="Control"]

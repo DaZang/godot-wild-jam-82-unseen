@@ -2,6 +2,8 @@ class_name Main
 extends Node2D
 @onready var pause_menu_ui: PauseMenuUi = %PauseMenuUi
 @onready var fail_screen_ui: FailScreenUi = %FailScreenUi
+@onready var level_success_ui: LevelSuccessUi = %LevelSuccessUi
+
 @onready var game: Game = %Game
 
 var current_level_number := 1
@@ -10,8 +12,11 @@ var current_level_number := 1
 func _ready() -> void:
 	pause_menu_ui.restart_level_button.pressed.connect(restart_level)
 	pause_menu_ui.continue_button.pressed.connect(unpause)
+	level_success_ui.restart_level_button.pressed.connect(restart_level)
+	level_success_ui.continue_button.pressed.connect(continue_to_next_level)
 	fail_screen_ui.restart_level_button.pressed.connect(restart_level)
 	GameEvents.level_failed.connect(show_fail_screen)
+	GameEvents.level_completed.connect(_on_level_completed)
 	pass
 
 
@@ -27,9 +32,19 @@ func show_fail_screen() -> void:
 	fail_screen_ui.show()
 	game.get_tree().paused = true
 	
+	
+func _on_level_completed() -> void:
+	level_success_ui.show()
+	game.get_tree().paused = true
+	
 
 func restart_level() -> void:
-	game.load_level(game.current_level_id)
+	game.restart_level()
+	unpause()
+	
+	
+func continue_to_next_level() -> void:
+	game.load_next_level()
 	unpause()
 	
 
@@ -37,6 +52,7 @@ func unpause() -> void:
 	game.get_tree().paused = false
 	pause_menu_ui.hide()
 	fail_screen_ui.hide()
+	level_success_ui.hide()
 	
 	
 func pause() -> void:

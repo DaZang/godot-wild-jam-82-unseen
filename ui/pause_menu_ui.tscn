@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cxh2h8uhqy2xg"]
 
-[ext_resource type="Theme" uid="uid://c78tfrjryojg6" path="res://ui/ui_theme.tres" id="1_mtxqf"]
+[ext_resource type="Theme" uid="uid://7fkam3v6qs6" path="res://ui/pixel_ui_theme.tres" id="1_fqpnl"]
 [ext_resource type="Script" uid="uid://bdlxr4hm7tf6a" path="res://ui/pause_menu_ui.gd" id="2_pd0k7"]
 
 [node name="PauseMenuUi" type="Control"]
@@ -14,7 +14,7 @@ offset_right = -200.0
 offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_mtxqf")
+theme = ExtResource("1_fqpnl")
 script = ExtResource("2_pd0k7")
 
 [node name="ColorRect" type="ColorRect" parent="."]
