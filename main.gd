@@ -14,6 +14,7 @@ func _ready() -> void:
 	GameEvents.level_failed.connect(show_fail_screen)
 	pass
 
+
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("pause") and not fail_screen_ui.visible:
 		if pause_menu_ui.visible:
@@ -30,7 +31,6 @@ func show_fail_screen() -> void:
 func restart_level() -> void:
 	game.load_level(game.current_level_id)
 	unpause()
-	
 	
 
 func unpause() -> void:
