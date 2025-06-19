@@ -26,6 +26,7 @@ func load_level(level_id: String):
 	call_deferred("add_child", new_level)
 	call_deferred("move_child", new_level, 0)
 	current_level_id = level_id
+	GameEvents.emit_level_loaded(current_level_id.to_int())
 	
 	
 func restart_level():

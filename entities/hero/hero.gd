@@ -17,7 +17,7 @@ func _ready() -> void:
 	damage_interval_timer.timeout.connect(on_damage_interval_timer_timeout)
 	health_component.health_changed.connect(on_health_changed)
 	health_component.died.connect(GameEvents.emit_level_failed)
-	update_health_display()
+	on_health_changed()
 
 
 func _physics_process(delta: float) -> void:
@@ -47,6 +47,7 @@ func on_damage_interval_timer_timeout():
 
 func on_health_changed():
 	update_health_display()
+	GameState.hero_health_percentage = health_component.get_health_percent()
 	
 
 func update_health_display():

@@ -40,7 +40,29 @@ theme_override_constants/margin_right = 128
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = 24
 alignment = 1
+
+[node name="LevelCompletedHBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="LevelLabel" type="Label" parent="MarginContainer/VBoxContainer/LevelCompletedHBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Level"
+
+[node name="LevelValueLabel" type="Label" parent="MarginContainer/VBoxContainer/LevelCompletedHBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "99"
+
+[node name="LevelCompletedLabel" type="Label" parent="MarginContainer/VBoxContainer/LevelCompletedHBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "completed!"
 
 [node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -54,16 +76,20 @@ size_flags_horizontal = 4
 text = "Remaining Health:"
 
 [node name="RemainingHealthProgressBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 step = 1.0
 
 [node name="ComboScoreLabel" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Combo Score:"
 
-[node name="MonstersEliminated" type="ProgressBar" parent="MarginContainer/VBoxContainer/GridContainer"]
+[node name="ComboScoreProgressBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 step = 1.0
