@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://vagdjdb0eele"]
+[gd_scene load_steps=8 format=3 uid="uid://vagdjdb0eele"]
 
 [ext_resource type="Script" uid="uid://wicebpw6m6bf" path="res://game.gd" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://djd44gat0ahp5" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://cxh2h8uhqy2xg" path="res://ui/pause_menu_ui.tscn" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://5eah0b8886w2" path="res://ui/fail_screen_ui.tscn" id="3_lquwl"]
 [ext_resource type="PackedScene" uid="uid://8cpcvda0lxvh" path="res://ui/level_success_ui.tscn" id="4_7mycd"]
+[ext_resource type="PackedScene" uid="uid://ce3jl1aky264v" path="res://ui/game_completed_ui.tscn" id="5_272bh"]
 [ext_resource type="PackedScene" uid="uid://b2vw8fupxuivj" path="res://environments/level1.tscn" id="5_lquwl"]
 
 [node name="Main" type="Node2D"]
@@ -29,6 +30,10 @@ unique_name_in_owner = true
 visible = false
 
 [node name="LevelSuccessUi" parent="HudCanvasLayer" instance=ExtResource("4_7mycd")]
+unique_name_in_owner = true
+visible = false
+
+[node name="GameCompletedUi" parent="HudCanvasLayer" instance=ExtResource("5_272bh")]
 unique_name_in_owner = true
 visible = false
 

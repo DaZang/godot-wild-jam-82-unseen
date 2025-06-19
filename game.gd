@@ -35,3 +35,7 @@ func restart_level():
 
 func load_next_level():
 	load_level(str(current_level_id.to_int() + 1))
+	
+	
+func restart_game():
+	load_level(str(1))
