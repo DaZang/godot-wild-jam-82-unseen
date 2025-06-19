@@ -17,11 +17,10 @@ tile_map_data = PackedByteArray("AAAAAAAAAAABAAQAAAABAAAAAAAAAAQAAAABAAEAAAAAAAQ
 tile_set = ExtResource("2_wlgua")
 
 [node name="GameCamera2D" parent="." node_paths=PackedStringArray("hero") instance=ExtResource("3_qerkk")]
-position = Vector2(3384, 330)
+position = Vector2(554, 339)
 hero = NodePath("../Entities/Hero")
 
 [node name="EnemyManager" parent="." node_paths=PackedStringArray("hero") instance=ExtResource("4_hg43l")]
-basic_enemy_scene = ExtResource("5_kmher")
 hero = NodePath("../Entities/Hero")
 
 [node name="SpellManager" parent="." instance=ExtResource("5_uqs87")]
@@ -41,4 +40,4 @@ position = Vector2(705, 363)
 position = Vector2(737, 340)
 
 [node name="FinishLevelArea" parent="." instance=ExtResource("8_eb0c7")]
-position = Vector2(758, 338)
+position = Vector2(1654, 338)

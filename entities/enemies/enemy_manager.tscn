@@ -1,11 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://dt8yt77lmypr1"]
+[gd_scene load_steps=3 format=3 uid="uid://dt8yt77lmypr1"]
 
 [ext_resource type="Script" uid="uid://bbefo68shbumf" path="res://entities/enemies/enemy_manager.gd" id="1_ulrvu"]
+[ext_resource type="PackedScene" uid="uid://dwiphkghmc054" path="res://entities/enemies/rat_enemy.tscn" id="2_hu4tt"]
 
 [node name="EnemyManager" type="Node"]
 script = ExtResource("1_ulrvu")
+basic_enemy_scene = ExtResource("2_hu4tt")
 
 [node name="SpawnTimer" type="Timer" parent="."]
 unique_name_in_owner = true
 wait_time = 1.6
-autostart = true

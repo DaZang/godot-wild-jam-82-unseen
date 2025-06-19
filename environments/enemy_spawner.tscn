@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxuxq35mg87mn"]
+
+[ext_resource type="Script" uid="uid://d3kwh02t148pw" path="res://entities/enemies/enemy_spawner.gd" id="1_ljs6i"]
+[ext_resource type="PackedScene" uid="uid://dwiphkghmc054" path="res://entities/enemies/rat_enemy.tscn" id="2_fk06j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j7nbx"]
+radius = 674.145
+
+[node name="EnemySpawner" type="Node2D"]
+script = ExtResource("1_ljs6i")
+basic_enemy_scene = ExtResource("2_fk06j")
+
+[node name="HeroDetectorArea2D" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HeroDetectorArea2D"]
+shape = SubResource("CircleShape2D_j7nbx")
+
+[connection signal="body_entered" from="HeroDetectorArea2D" to="." method="_on_finish_level_area_2d_body_entered"]
