@@ -14,11 +14,14 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 
 func load_level(level_id: String):
-	var level_scene = load("res://environments/" + "level" + level_id + ".tscn")
-	if level_scene == null:
+	var resource_path = "res://environments/" + "level" + level_id + ".tscn"
+	var level_scene: Resource
+	if not ResourceLoader.exists(resource_path):
 		print("new level scene can not be loaded")
 		game_completed.emit()
 		return
+	else:
+		level_scene = load(resource_path)
 	var old_level = get_tree().get_first_node_in_group("environments")
 	if old_level != null:
 		old_level.queue_free()
