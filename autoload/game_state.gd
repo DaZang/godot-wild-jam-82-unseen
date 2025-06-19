@@ -3,6 +3,7 @@ extends Node
 var level_number := 1
 var hero_health_percentage := 0.0
 var combo_score_percentage := 0.0
+var number_of_fire_balls := 5
 
 
 func _ready() -> void:

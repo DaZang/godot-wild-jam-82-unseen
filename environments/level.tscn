@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=4 uid="uid://bx548ebid5r8x"]
+[gd_scene load_steps=8 format=4 uid="uid://bx548ebid5r8x"]
 
 [ext_resource type="Script" uid="uid://cgftnfphnqjpk" path="res://environments/level.gd" id="1_xk8d6"]
 [ext_resource type="PackedScene" uid="uid://dgm7p5lm400is" path="res://entities/hero/hero.tscn" id="2_qerkk"]
 [ext_resource type="TileSet" uid="uid://jyms4p2ljess" path="res://environments/level_tileset.tres" id="2_wlgua"]
 [ext_resource type="PackedScene" uid="uid://c2s33a54tya55" path="res://game_camera_2d.tscn" id="3_qerkk"]
 [ext_resource type="PackedScene" uid="uid://dt8yt77lmypr1" path="res://entities/enemies/enemy_manager.tscn" id="4_hg43l"]
-[ext_resource type="PackedScene" uid="uid://dwiphkghmc054" path="res://entities/enemies/rat_enemy.tscn" id="5_kmher"]
 [ext_resource type="PackedScene" uid="uid://dp11k3jdjlbum" path="res://entities/spell_manager.tscn" id="5_uqs87"]
 [ext_resource type="PackedScene" uid="uid://dnnc47m4834vj" path="res://environments/finish_level_area.tscn" id="8_eb0c7"]
 
@@ -29,15 +28,6 @@ hero = NodePath("../Entities/Hero")
 
 [node name="Hero" parent="Entities" instance=ExtResource("2_qerkk")]
 position = Vector2(550, 340)
-
-[node name="RatEnemy" parent="Entities" instance=ExtResource("5_kmher")]
-position = Vector2(709, 317)
-
-[node name="RatEnemy2" parent="Entities" instance=ExtResource("5_kmher")]
-position = Vector2(705, 363)
-
-[node name="RatEnemy3" parent="Entities" instance=ExtResource("5_kmher")]
-position = Vector2(737, 340)
 
 [node name="FinishLevelArea" parent="." instance=ExtResource("8_eb0c7")]
 position = Vector2(1654, 338)

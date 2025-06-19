@@ -13,3 +13,102 @@ position = Vector2(1290, 347)
 
 [node name="EnemySpawner3" parent="." index="8" instance=ExtResource("2_mt3si")]
 position = Vector2(1247, 144)
+
+[node name="EnemySpawner4" parent="." index="9" instance=ExtResource("2_mt3si")]
+position = Vector2(1114, 333)
+
+[node name="EnemySpawner5" parent="." index="10" instance=ExtResource("2_mt3si")]
+position = Vector2(1358, 482)
+
+[node name="EnemySpawner6" parent="." index="11" instance=ExtResource("2_mt3si")]
+position = Vector2(1431, 212)
+
+[node name="EnemySpawner7" parent="." index="12" instance=ExtResource("2_mt3si")]
+position = Vector2(1459, 292)
+
+[node name="EnemySpawner8" parent="." index="13" instance=ExtResource("2_mt3si")]
+position = Vector2(1389, 60)
+
+[node name="EnemySpawner9" parent="." index="14" instance=ExtResource("2_mt3si")]
+position = Vector2(1442, 511)
+
+[node name="EnemySpawner10" parent="." index="15" instance=ExtResource("2_mt3si")]
+position = Vector2(1524, 68)
+
+[node name="EnemySpawner11" parent="." index="16" instance=ExtResource("2_mt3si")]
+position = Vector2(1572, 527)
+
+[node name="EnemySpawner12" parent="." index="17" instance=ExtResource("2_mt3si")]
+position = Vector2(1451, -1)
+
+[node name="EnemySpawner13" parent="." index="18" instance=ExtResource("2_mt3si")]
+position = Vector2(1349, 599)
+
+[node name="EnemySpawner14" parent="." index="19" instance=ExtResource("2_mt3si")]
+position = Vector2(1661, 40)
+
+[node name="EnemySpawner15" parent="." index="20" instance=ExtResource("2_mt3si")]
+position = Vector2(1736, 138)
+
+[node name="EnemySpawner16" parent="." index="21" instance=ExtResource("2_mt3si")]
+position = Vector2(1776, 297)
+
+[node name="EnemySpawner17" parent="." index="22" instance=ExtResource("2_mt3si")]
+position = Vector2(1776, 451)
+
+[node name="EnemySpawner18" parent="." index="23" instance=ExtResource("2_mt3si")]
+position = Vector2(1717, 617)
+
+[node name="EnemySpawner19" parent="." index="24" instance=ExtResource("2_mt3si")]
+position = Vector2(1792, 357)
+
+[node name="EnemySpawner20" parent="." index="25" instance=ExtResource("2_mt3si")]
+position = Vector2(1758, 190)
+
+[node name="EnemySpawner21" parent="." index="26" instance=ExtResource("2_mt3si")]
+position = Vector2(1664, 133)
+
+[node name="EnemySpawner22" parent="." index="27" instance=ExtResource("2_mt3si")]
+position = Vector2(1710, 259)
+
+[node name="EnemySpawner23" parent="." index="28" instance=ExtResource("2_mt3si")]
+position = Vector2(1750, 403)
+
+[node name="EnemySpawner24" parent="." index="29" instance=ExtResource("2_mt3si")]
+position = Vector2(1804, 203)
+
+[node name="EnemySpawner25" parent="." index="30" instance=ExtResource("2_mt3si")]
+position = Vector2(1833, 41)
+
+[node name="EnemySpawner26" parent="." index="31" instance=ExtResource("2_mt3si")]
+position = Vector2(1900, 186)
+
+[node name="EnemySpawner27" parent="." index="32" instance=ExtResource("2_mt3si")]
+position = Vector2(1902, 325)
+
+[node name="EnemySpawner28" parent="." index="33" instance=ExtResource("2_mt3si")]
+position = Vector2(1917, 469)
+
+[node name="EnemySpawner29" parent="." index="34" instance=ExtResource("2_mt3si")]
+position = Vector2(1881, 571)
+
+[node name="EnemySpawner30" parent="." index="35" instance=ExtResource("2_mt3si")]
+position = Vector2(1835, 640)
+
+[node name="EnemySpawner31" parent="." index="36" instance=ExtResource("2_mt3si")]
+position = Vector2(1773, 740)
+
+[node name="EnemySpawner32" parent="." index="37" instance=ExtResource("2_mt3si")]
+position = Vector2(1824, 840)
+
+[node name="EnemySpawner33" parent="." index="38" instance=ExtResource("2_mt3si")]
+position = Vector2(1678, 864)
+
+[node name="EnemySpawner34" parent="." index="39" instance=ExtResource("2_mt3si")]
+position = Vector2(1522, 865)
+
+[node name="EnemySpawner35" parent="." index="40" instance=ExtResource("2_mt3si")]
+position = Vector2(1710, -72)
+
+[node name="EnemySpawner36" parent="." index="41" instance=ExtResource("2_mt3si")]
+position = Vector2(1585, -113)

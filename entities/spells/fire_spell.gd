@@ -5,16 +5,22 @@ enum States {CHARGING, EFFECTIVE}
 
 var state: States
 
+@export var fire_ball_scene: PackedScene
+
 @onready var charge_duration_timer: Timer = %ChargeDurationTimer
 @onready var spell_duration_timer: Timer = %SpellDurationTimer
-@onready var hitbox_component: HitboxComponent = %HitboxComponent
-@onready var fire_shader_color_rect: ColorRect = %FireShaderColorRect
+@onready var spell_start_point_sprite: Sprite2D = %SpellStartPointSprite
+@onready var spell_end_point_sprite: Sprite2D = %SpellEndPointSprite
 
 
 func _ready() -> void:
-	hitbox_component.collision_shape_2d.set_disabled(true)
 	state = States.CHARGING
 	charge_duration_timer.start()
+	
+	
+func _physics_process(_delta: float) -> void:
+	if state == States.CHARGING:
+		spell_end_point_sprite.global_position = get_global_mouse_position()
 
 
 func try_abort_charging():
@@ -24,9 +30,16 @@ func try_abort_charging():
 
 func _on_charge_duration_timer_timeout() -> void:
 	state = States.EFFECTIVE
-	hitbox_component.collision_shape_2d.set_disabled(false)
 	spell_duration_timer.start()
-	fire_shader_color_rect.show()
+	for i in range(1, GameState.number_of_fire_balls + 1):
+		var fire_ball = fire_ball_scene.instantiate() as Node2D
+		fire_ball.position = spell_start_point_sprite.position + \
+				(spell_end_point_sprite.position - spell_start_point_sprite.position) \
+				 / (GameState.number_of_fire_balls - 1) * (i - 1)
+		call_deferred("add_child", fire_ball)
+		
+	
+	
 
 
 func _on_spell_duration_timer_timeout() -> void:
