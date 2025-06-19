@@ -1,9 +1,9 @@
 class_name SpellManager
 extends Node2D
 
-const LIGHTNING_SPELL_SCENE = preload("res://entities/spells/lightning_spell.tscn")
+const LIGHTNING_SPELL_SCENE = preload("res://entities/spells/fire_spell.tscn")
 
-var current_lightning_spell: LightningSpell
+var current_lightning_spell: FireSpell
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("shoot_lightning"):

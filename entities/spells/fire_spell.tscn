@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://76demrrp7djb"]
+
+[ext_resource type="Script" uid="uid://df8euw7plrnxg" path="res://entities/spells/fire_spell.gd" id="1_whtfy"]
+[ext_resource type="PackedScene" uid="uid://ccpuo6i8pp5th" path="res://entities/hitbox_component.tscn" id="2_jx5u6"]
+[ext_resource type="Texture2D" uid="uid://c0ocjoa2veaoy" path="res://tilemap_packed.png" id="3_8nnm3"]
+[ext_resource type="Material" uid="uid://diacegjydhhxg" path="res://generic_resources/shaders/pixel_fire_shader.tres" id="4_jx5u6"]
+
+[node name="FireSpell" type="Node2D"]
+script = ExtResource("1_whtfy")
+
+[node name="HitboxComponent" parent="." instance=ExtResource("2_jx5u6")]
+unique_name_in_owner = true
+damage = 10
+
+[node name="SpellDurationTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true
+
+[node name="SpellSprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_8nnm3")
+hframes = 12
+vframes = 11
+frame = 130
+
+[node name="ChargeDurationTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.8
+one_shot = true
+
+[node name="FireShaderColorRect" type="ColorRect" parent="."]
+unique_name_in_owner = true
+visible = false
+material = ExtResource("4_jx5u6")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="timeout" from="SpellDurationTimer" to="." method="_on_spell_duration_timer_timeout"]
+[connection signal="timeout" from="ChargeDurationTimer" to="." method="_on_charge_duration_timer_timeout"]

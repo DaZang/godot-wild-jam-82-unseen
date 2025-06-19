@@ -1,37 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dssxhih88jjmq"]
+[gd_scene load_steps=2 format=3 uid="uid://dssxhih88jjmq"]
 
-[ext_resource type="Shader" uid="uid://bcopouw8bu8dq" path="res://generic_resources/shaders/2d_fire.gdshader" id="1_s37jj"]
-
-[sub_resource type="Gradient" id="Gradient_s37jj"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_li7c4"]
-gradient = SubResource("Gradient_s37jj")
-
-[sub_resource type="Gradient" id="Gradient_li7c4"]
-colors = PackedColorArray(0, 0, 0, 1, 0.66437, 0.66437, 0.66437, 1)
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_h5org"]
-frequency = 0.0162
-domain_warp_enabled = true
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_h5org"]
-width = 128
-height = 128
-color_ramp = SubResource("Gradient_li7c4")
-noise = SubResource("FastNoiseLite_h5org")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_li7c4"]
-shader = ExtResource("1_s37jj")
-shader_parameter/noise_tex = SubResource("NoiseTexture2D_h5org")
-shader_parameter/gradient_tex = SubResource("GradientTexture2D_li7c4")
-shader_parameter/brighter_color = Color(1, 0.8, 0, 1)
-shader_parameter/middle_color = Color(1, 0.56, 0, 1)
-shader_parameter/darker_color = Color(0.64, 0.2, 0.05, 1)
-shader_parameter/spread = 0.557
+[ext_resource type="Material" uid="uid://diacegjydhhxg" path="res://generic_resources/shaders/pixel_fire_shader.tres" id="1_s37jj"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_li7c4")
+material = ExtResource("1_s37jj")
 offset_right = 16.0
 offset_bottom = 16.0
