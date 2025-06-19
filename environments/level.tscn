@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://bx548ebid5r8x"]
+[gd_scene load_steps=10 format=4 uid="uid://bx548ebid5r8x"]
 
 [ext_resource type="Script" uid="uid://cgftnfphnqjpk" path="res://environments/level.gd" id="1_xk8d6"]
 [ext_resource type="PackedScene" uid="uid://dgm7p5lm400is" path="res://entities/hero/hero.tscn" id="2_qerkk"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dwiphkghmc054" path="res://entities/enemies/rat_enemy.tscn" id="5_kmher"]
 [ext_resource type="PackedScene" uid="uid://dp11k3jdjlbum" path="res://entities/spell_manager.tscn" id="5_uqs87"]
 [ext_resource type="PackedScene" uid="uid://dnnc47m4834vj" path="res://environments/finish_level_area.tscn" id="8_eb0c7"]
+[ext_resource type="PackedScene" uid="uid://dssxhih88jjmq" path="res://shader_test.tscn" id="9_jdiad"]
 
 [node name="Level" type="Node2D" groups=["environments"]]
 script = ExtResource("1_xk8d6")
@@ -41,3 +42,6 @@ position = Vector2(737, 340)
 
 [node name="FinishLevelArea" parent="." instance=ExtResource("8_eb0c7")]
 position = Vector2(1654, 338)
+
+[node name="Node2D" parent="." instance=ExtResource("9_jdiad")]
+position = Vector2(662, 306)
