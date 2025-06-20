@@ -7,7 +7,7 @@
 
 [node name="HitboxComponent" parent="." instance=ExtResource("1_c6uut")]
 unique_name_in_owner = true
-damage = 10
+damage = 5
 
 [node name="FireShaderColorRect" type="ColorRect" parent="."]
 unique_name_in_owner = true
@@ -23,3 +23,5 @@ offset_right = 8.0
 offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[editable path="HitboxComponent"]

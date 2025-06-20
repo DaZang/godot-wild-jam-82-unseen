@@ -53,6 +53,7 @@ DragButton/base_type = &"Button"
 DragButton/styles/hover = SubResource("StyleBoxEmpty_k3upm")
 DragButton/styles/normal = SubResource("StyleBoxEmpty_bd1ec")
 DragButton/styles/pressed = SubResource("StyleBoxEmpty_bkxsc")
+Label/constants/outline_size = 3
 Panel/styles/panel = SubResource("StyleBoxFlat_kf50m")
 ProgressBar/styles/background = SubResource("StyleBoxFlat_bd1ec")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_bkxsc")

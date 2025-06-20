@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cffo13evp2gum" path="res://entities/hitbox_component.gd" id="1_wf2kf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_33bqi"]
-radius = 17.0
+radius = 12.0
 
 [node name="HitboxComponent" type="Area2D"]
 collision_layer = 4

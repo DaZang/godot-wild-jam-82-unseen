@@ -6,6 +6,7 @@ signal health_changed
 
 @export var max_health: float = 10
 var current_health
+var dead = false
 
 
 func _ready():
@@ -15,7 +16,7 @@ func _ready():
 func damage(damage_amount: float):
 	current_health = max(current_health - damage_amount, 0)
 	health_changed.emit()
-	Callable(check_death).call_deferred() # TODO: shouldn't it work without Callable() as well?
+	check_death() # TODO: shouldn't it work without Callable() as well?
 	
 	
 func get_health_percent():
@@ -25,6 +26,7 @@ func get_health_percent():
 
 
 func check_death():
-	if current_health == 0:
+	if current_health == 0 and not dead:
+		dead = true
 		died.emit()
 		owner.queue_free()
