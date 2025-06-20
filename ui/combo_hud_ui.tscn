@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://7jomw5nurmwk"]
+
+[ext_resource type="Theme" uid="uid://7fkam3v6qs6" path="res://ui/pixel_ui_theme.tres" id="1_b4ro7"]
+[ext_resource type="Script" uid="uid://543m5af0uoum" path="res://ui/combo_hud_ui.gd" id="1_wvjlm"]
+[ext_resource type="Texture2D" uid="uid://dbtwx8npxe6ye" path="res://ui/circle_progress_bar_background.png" id="2_nx1er"]
+[ext_resource type="Texture2D" uid="uid://qkkbmafwwklc" path="res://ui/circle_progress_bar_fill.png" id="3_b4ro7"]
+
+[node name="ComboHudUi" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_b4ro7")
+script = ExtResource("1_wvjlm")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 84.0
+offset_bottom = 84.0
+fill_mode = 4
+texture_under = ExtResource("2_nx1er")
+texture_progress = ExtResource("3_b4ro7")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 44.0
+offset_right = 77.0
+offset_bottom = 67.0
+text = "Combo"

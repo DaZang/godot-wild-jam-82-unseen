@@ -5,6 +5,9 @@
 
 [node name="Level1" instance=ExtResource("1_o7wj2")]
 
+[node name="GameCamera2D" parent="." index="1"]
+position = Vector2(480, 270)
+
 [node name="EnemySpawner" parent="." index="6" instance=ExtResource("2_mt3si")]
 position = Vector2(1210, 335)
 
