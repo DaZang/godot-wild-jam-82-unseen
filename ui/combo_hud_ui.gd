@@ -16,3 +16,9 @@ func _on_combo_break_timer_changed(time_left: float, wait_time: float) -> void:
 
 func _on_combo_damage_multiplier_changed(combo_damage_multiplier: float) -> void:
 	combo_damage_multiplier_value_label.text = str(combo_damage_multiplier)
+	var new_color: Color
+	if combo_damage_multiplier == 1.0:
+		new_color = Color.WHITE
+	else:
+		new_color = Color.LIME_GREEN
+	combo_damage_multiplier_value_label.set("theme_override_colors/font_color", new_color)
