@@ -34,7 +34,7 @@ hero = NodePath("../Entities/Hero")
 position = Vector2(550, 340)
 
 [node name="FinishLevelArea" parent="." instance=ExtResource("8_eb0c7")]
-position = Vector2(1654, 338)
+position = Vector2(3323, 338)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

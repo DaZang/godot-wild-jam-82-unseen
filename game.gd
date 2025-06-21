@@ -11,6 +11,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		load_level("1")
 	elif event.is_action_pressed("load_level_2"):
 		load_level("2")
+	elif event.is_action_pressed("load_level_3"):
+		load_level("3")
 		
 
 func load_level(level_id: String):
