@@ -3,10 +3,12 @@
 [ext_resource type="Script" uid="uid://b6s7tbxuw0rhw" path="res://entities/hurtbox_component.gd" id="1_w38aj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w38aj"]
+radius = 18.0278
 
 [node name="HurtboxComponent" type="Area2D"]
 collision_layer = 0
 collision_mask = 4
+input_pickable = false
 script = ExtResource("1_w38aj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -9,6 +9,7 @@ script = ExtResource("1_t1aoa")
 
 [node name="HitboxComponent" parent="." instance=ExtResource("1_c6uut")]
 unique_name_in_owner = true
+input_pickable = false
 damage = 5
 
 [node name="FireShaderColorRect" type="ColorRect" parent="."]

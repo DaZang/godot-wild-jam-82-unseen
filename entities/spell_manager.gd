@@ -5,7 +5,7 @@ const LIGHTNING_SPELL_SCENE = preload("res://entities/spells/fire_spell.tscn")
 
 var current_lightning_spell: FireSpell
 
-func _unhandled_input(event: InputEvent) -> void:
+func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("shoot_lightning"):
 		var entities_node = get_tree().get_first_node_in_group("entities_node") as Node2D
 		var lightning_spell = LIGHTNING_SPELL_SCENE.instantiate()
