@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://c06wu66egfrdl"]
+
+[ext_resource type="Script" uid="uid://dgvwsyynjouvt" path="res://entities/enemies/cyclops_enemy.gd" id="1_3n3at"]
+[ext_resource type="Texture2D" uid="uid://bmwklqe7w73py" path="res://entities/enemies/cyclops_enemy.png" id="2_3n3at"]
+[ext_resource type="PackedScene" uid="uid://c1nox6x4jf5pr" path="res://entities/health_component.tscn" id="3_pcquy"]
+[ext_resource type="PackedScene" uid="uid://oe8k1f5ymcg4" path="res://entities/hurtbox_component.tscn" id="4_pik1k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s8ari"]
+radius = 7.0
+
+[node name="CyclopsEnemy" type="CharacterBody2D"]
+collision_layer = 8
+script = ExtResource("1_3n3at")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -13)
+texture = ExtResource("2_3n3at")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("CircleShape2D_s8ari")
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_pcquy")]
+unique_name_in_owner = true
+max_health = 100.0
+
+[node name="HurtboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_pik1k")]
+position = Vector2(0, -9)
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" parent="HurtboxComponent" index="0"]
+position = Vector2(0, -2)
+
+[editable path="HurtboxComponent"]

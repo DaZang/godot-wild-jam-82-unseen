@@ -32,7 +32,7 @@ func _on_enemy_died() -> void:
 	if highest_multi_kill_in_combo < current_multi_kill:
 		highest_multi_kill_in_combo = current_multi_kill
 		GameState.combo_damage_multiplier = highest_multi_kill_in_combo
-		GameState.number_of_fire_balls = GameState.DEFAULT_NUMBER_OF_FIRE_BALLS + highest_multi_kill_in_combo
+		GameState.number_of_fire_balls = round(GameState.DEFAULT_NUMBER_OF_FIRE_BALLS + highest_multi_kill_in_combo)
 	if not combo_break_timer.is_stopped():
 		combo_break_timer.wait_time += 0.1
 	combo_break_timer.start()
@@ -46,5 +46,6 @@ func _on_combo_break_timer_timeout() -> void:
 	current_combo_break_timer_wait_time = DEFAULT_COMBO_DURATION
 	combo_break_timer.wait_time = current_combo_break_timer_wait_time
 	GameState.combo_damage_multiplier = 1.0
+	GameState.number_of_fire_balls = GameState.DEFAULT_NUMBER_OF_FIRE_BALLS
 	current_multi_kill = 0.0
 	highest_multi_kill_in_combo = 0.0

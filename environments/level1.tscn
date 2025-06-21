@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b2vw8fupxuivj"]
+[gd_scene load_steps=4 format=3 uid="uid://b2vw8fupxuivj"]
 
 [ext_resource type="PackedScene" uid="uid://bx548ebid5r8x" path="res://environments/level.tscn" id="1_o7wj2"]
 [ext_resource type="PackedScene" uid="uid://bxuxq35mg87mn" path="res://environments/enemy_spawner.tscn" id="2_mt3si"]
+[ext_resource type="PackedScene" uid="uid://c06wu66egfrdl" path="res://entities/enemies/cyclops_enemy.tscn" id="3_rr0ta"]
 
 [node name="Level1" instance=ExtResource("1_o7wj2")]
 
@@ -115,3 +116,7 @@ position = Vector2(1710, -72)
 
 [node name="EnemySpawner36" parent="." index="41" instance=ExtResource("2_mt3si")]
 position = Vector2(1585, -113)
+
+[node name="EnemySpawner37" parent="." index="42" instance=ExtResource("2_mt3si")]
+position = Vector2(1031, 363)
+basic_enemy_scene = ExtResource("3_rr0ta")

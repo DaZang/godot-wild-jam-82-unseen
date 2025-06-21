@@ -1,7 +1,7 @@
-class_name RatEnemy
+class_name CyclopsEnemy
 extends CharacterBody2D
 
-const MAX_SPEED = 2500
+const MAX_SPEED = 1500
 
 @onready var health_component: HealthComponent = %HealthComponent
 
