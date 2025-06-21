@@ -20,3 +20,4 @@ func _ready() -> void:
 func _on_level_loaded(loaded_level_number: int) -> void:
 	self.level_number = loaded_level_number
 	number_of_fire_balls = DEFAULT_NUMBER_OF_FIRE_BALLS
+	combo_damage_multiplier = 1.0
