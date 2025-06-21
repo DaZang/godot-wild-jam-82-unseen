@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://ia8ien536qw2"]
+[gd_scene load_steps=4 format=3 uid="uid://ia8ien536qw2"]
 
 [ext_resource type="PackedScene" uid="uid://ccpuo6i8pp5th" path="res://entities/hitbox_component.tscn" id="1_c6uut"]
+[ext_resource type="Script" uid="uid://dhe0anphs2oth" path="res://entities/spells/fire_ball.gd" id="1_t1aoa"]
 [ext_resource type="Material" uid="uid://diacegjydhhxg" path="res://generic_resources/shaders/pixel_fire_shader.tres" id="2_t1aoa"]
 
 [node name="FireBall" type="Node2D"]
+script = ExtResource("1_t1aoa")
 
 [node name="HitboxComponent" parent="." instance=ExtResource("1_c6uut")]
 unique_name_in_owner = true
