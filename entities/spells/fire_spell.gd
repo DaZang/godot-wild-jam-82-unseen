@@ -11,11 +11,15 @@ var state: States
 @onready var spell_duration_timer: Timer = %SpellDurationTimer
 @onready var spell_start_point_sprite: Sprite2D = %SpellStartPointSprite
 @onready var spell_end_point_sprite: Sprite2D = %SpellEndPointSprite
+@onready var flame_audio_stream_player_2d: AudioStreamPlayer2D = %FlameAudioStreamPlayer2D
+@onready var charge_audio_stream_player_2d: AudioStreamPlayer2D = %ChargeAudioStreamPlayer2D
 
 
 func _ready() -> void:
 	state = States.CHARGING
 	charge_duration_timer.start()
+	charge_audio_stream_player_2d.play()
+	
 	
 	
 func _physics_process(_delta: float) -> void:
@@ -37,7 +41,7 @@ func _on_charge_duration_timer_timeout() -> void:
 				(spell_end_point_sprite.position - spell_start_point_sprite.position) \
 				 / (GameState.number_of_fire_balls - 1) * (i - 1)
 		call_deferred("add_child", fire_ball)
-		
+	flame_audio_stream_player_2d.play()
 	
 	
 

@@ -11,6 +11,8 @@ var current_multi_kill := 0.0
 
 @onready var combo_break_timer: Timer = %ComboBreakTimer
 @onready var multi_kill_timer: Timer = %MultiKillTimer
+@onready var combo_up_audio_stream_player: AudioStreamPlayer = %ComboUpAudioStreamPlayer
+@onready var combo_down_audio_stream_player: AudioStreamPlayer = %ComboDownAudioStreamPlayer
 
 
 func _ready() -> void:
@@ -36,7 +38,7 @@ func _on_enemy_died() -> void:
 	if not combo_break_timer.is_stopped():
 		combo_break_timer.wait_time += 0.1
 	combo_break_timer.start()
-	
+	combo_up_audio_stream_player.play()
 	
 func _on_multi_kill_timer_timeout() -> void:
 	current_multi_kill = 0.0
@@ -49,3 +51,4 @@ func _on_combo_break_timer_timeout() -> void:
 	GameState.number_of_fire_balls = GameState.DEFAULT_NUMBER_OF_FIRE_BALLS
 	current_multi_kill = 0.0
 	highest_multi_kill_in_combo = 0.0
+	combo_down_audio_stream_player.play()
