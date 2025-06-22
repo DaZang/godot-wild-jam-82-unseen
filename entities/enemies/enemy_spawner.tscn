@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d3kwh02t148pw" path="res://entities/enemies/enemy_spawner.gd" id="1_ljs6i"]
 [ext_resource type="PackedScene" uid="uid://dwiphkghmc054" path="res://entities/enemies/rat_enemy.tscn" id="2_fk06j"]
 
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_j7nbx"]
 radius = 674.145
 

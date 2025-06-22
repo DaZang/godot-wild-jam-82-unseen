@@ -1,122 +1,183 @@
-[gd_scene load_steps=4 format=3 uid="uid://b2vw8fupxuivj"]
+[gd_scene load_steps=5 format=3 uid="uid://b2vw8fupxuivj"]
 
 [ext_resource type="PackedScene" uid="uid://bx548ebid5r8x" path="res://environments/level.tscn" id="1_o7wj2"]
-[ext_resource type="PackedScene" uid="uid://bxuxq35mg87mn" path="res://environments/enemy_spawner.tscn" id="2_mt3si"]
-[ext_resource type="PackedScene" uid="uid://c06wu66egfrdl" path="res://entities/enemies/cyclops_enemy.tscn" id="3_rr0ta"]
+[ext_resource type="Theme" uid="uid://7fkam3v6qs6" path="res://ui/pixel_ui_theme.tres" id="2_mt3si"]
+[ext_resource type="PackedScene" uid="uid://dwiphkghmc054" path="res://entities/enemies/rat_enemy.tscn" id="3_rr0ta"]
+[ext_resource type="Script" uid="uid://b6fo00ywklx68" path="res://entities/enemies/idle_rat_enemy.gd" id="4_wi5vl"]
 
 [node name="Level1" instance=ExtResource("1_o7wj2")]
 
 [node name="GameCamera2D" parent="." index="1"]
 position = Vector2(480, 270)
 
-[node name="EnemySpawner" parent="." index="6" instance=ExtResource("2_mt3si")]
-position = Vector2(1210, 335)
+[node name="EnemySpawners" type="Node2D" parent="." index="5"]
 
-[node name="EnemySpawner2" parent="." index="7" instance=ExtResource("2_mt3si")]
-position = Vector2(1290, 347)
+[node name="FinishLevelArea" parent="." index="7"]
+position = Vector2(2996, 332)
 
-[node name="EnemySpawner3" parent="." index="8" instance=ExtResource("2_mt3si")]
-position = Vector2(1247, 144)
+[node name="Tutorial" type="Node2D" parent="." index="9"]
 
-[node name="EnemySpawner4" parent="." index="9" instance=ExtResource("2_mt3si")]
-position = Vector2(1114, 333)
+[node name="TutorialStartTimer" type="Timer" parent="Tutorial" index="0"]
 
-[node name="EnemySpawner5" parent="." index="10" instance=ExtResource("2_mt3si")]
-position = Vector2(1358, 482)
+[node name="TutorialDialogUi" type="Control" parent="Tutorial" index="1"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="EnemySpawner6" parent="." index="11" instance=ExtResource("2_mt3si")]
-position = Vector2(1431, 212)
+[node name="TutorialLabel" type="Label" parent="." index="10"]
+offset_left = 963.0
+offset_top = 463.0
+offset_right = 1177.0
+offset_bottom = 535.0
+theme = ExtResource("2_mt3si")
+text = "You can play this game 
+with mouse only."
 
-[node name="EnemySpawner7" parent="." index="12" instance=ExtResource("2_mt3si")]
-position = Vector2(1459, 292)
+[node name="TutorialLabel2" type="Label" parent="." index="11"]
+offset_left = 1157.0
+offset_top = 427.0
+offset_right = 1371.0
+offset_bottom = 499.0
+theme = ExtResource("2_mt3si")
+text = "To pause the game:
+Press right mouse button"
 
-[node name="EnemySpawner8" parent="." index="13" instance=ExtResource("2_mt3si")]
-position = Vector2(1389, 60)
+[node name="TutorialLabel3" type="Label" parent="." index="12"]
+offset_left = 1348.0
+offset_top = 511.0
+offset_right = 1562.0
+offset_bottom = 583.0
+theme = ExtResource("2_mt3si")
+text = "To cast a fire spell:
+Click and drag left mouse button."
 
-[node name="EnemySpawner9" parent="." index="14" instance=ExtResource("2_mt3si")]
-position = Vector2(1442, 511)
+[node name="TutorialLabel4" type="Label" parent="." index="13"]
+offset_left = 1705.0
+offset_top = 376.0
+offset_right = 1919.0
+offset_bottom = 448.0
+theme = ExtResource("2_mt3si")
+text = "The hero is going to be 
+attacked by monsters. 
+Kill monsters by
+casting fire spells"
 
-[node name="EnemySpawner10" parent="." index="15" instance=ExtResource("2_mt3si")]
-position = Vector2(1524, 68)
+[node name="TutorialLabel5" type="Label" parent="." index="14"]
+offset_left = 2226.0
+offset_top = 455.0
+offset_right = 2451.0
+offset_bottom = 527.0
+theme = ExtResource("2_mt3si")
+text = "Killing multiple monsters 
+within a short time 
+increases your combo 
+damage multiplier"
 
-[node name="EnemySpawner11" parent="." index="16" instance=ExtResource("2_mt3si")]
-position = Vector2(1572, 527)
+[node name="TutorialLabel6" type="Label" parent="." index="15"]
+offset_left = 2577.0
+offset_top = 169.0
+offset_right = 2876.0
+offset_bottom = 241.0
+theme = ExtResource("2_mt3si")
+text = "It also increases the
+ number of flames
+ in a flame spell.
+"
 
-[node name="EnemySpawner12" parent="." index="17" instance=ExtResource("2_mt3si")]
-position = Vector2(1451, -1)
+[node name="TutorialLabel7" type="Label" parent="." index="16"]
+offset_left = 2721.0
+offset_top = 448.0
+offset_right = 2935.0
+offset_bottom = 520.0
+theme = ExtResource("2_mt3si")
+text = "When the combo break timer 
+in the corner ends
+your damage mutliplier is lost.
+"
 
-[node name="EnemySpawner13" parent="." index="18" instance=ExtResource("2_mt3si")]
-position = Vector2(1349, 599)
+[node name="TutorialLabel8" type="Label" parent="." index="17"]
+offset_left = 2923.0
+offset_top = 357.0
+offset_right = 3137.0
+offset_bottom = 429.0
+theme = ExtResource("2_mt3si")
+theme_override_font_sizes/font_size = 32
+text = "Have fun!
+"
 
-[node name="EnemySpawner14" parent="." index="19" instance=ExtResource("2_mt3si")]
-position = Vector2(1661, 40)
+[node name="RatEnemy" parent="." index="18" instance=ExtResource("3_rr0ta")]
+position = Vector2(1841, 130)
+script = ExtResource("4_wi5vl")
 
-[node name="EnemySpawner15" parent="." index="20" instance=ExtResource("2_mt3si")]
-position = Vector2(1736, 138)
+[node name="RatEnemy2" parent="." index="19" instance=ExtResource("3_rr0ta")]
+position = Vector2(1972, 520)
+script = ExtResource("4_wi5vl")
 
-[node name="EnemySpawner16" parent="." index="21" instance=ExtResource("2_mt3si")]
-position = Vector2(1776, 297)
+[node name="RatEnemy3" parent="." index="20" instance=ExtResource("3_rr0ta")]
+position = Vector2(2153, 247)
+script = ExtResource("4_wi5vl")
 
-[node name="EnemySpawner17" parent="." index="22" instance=ExtResource("2_mt3si")]
-position = Vector2(1776, 451)
+[node name="RatEnemy4" parent="." index="21" instance=ExtResource("3_rr0ta")]
+position = Vector2(2462, 183)
+script = ExtResource("4_wi5vl")
 
-[node name="EnemySpawner18" parent="." index="23" instance=ExtResource("2_mt3si")]
-position = Vector2(1717, 617)
+[node name="RatEnemy5" parent="." index="22" instance=ExtResource("3_rr0ta")]
+position = Vector2(2491, 227)
+script = ExtResource("4_wi5vl")
 
-[node name="EnemySpawner19" parent="." index="24" instance=ExtResource("2_mt3si")]
-position = Vector2(1792, 357)
+[node name="RatEnemy6" parent="." index="23" instance=ExtResource("3_rr0ta")]
+position = Vector2(2475, 204)
+script = ExtResource("4_wi5vl")
 
-[node name="EnemySpawner20" parent="." index="25" instance=ExtResource("2_mt3si")]
-position = Vector2(1758, 190)
+[node name="RatEnemy7" parent="." index="24" instance=ExtResource("3_rr0ta")]
+position = Vector2(2443, 159)
+script = ExtResource("4_wi5vl")
 
-[node name="EnemySpawner21" parent="." index="26" instance=ExtResource("2_mt3si")]
-position = Vector2(1664, 133)
+[node name="RatEnemy8" parent="." index="25" instance=ExtResource("3_rr0ta")]
+position = Vector2(2862, 218)
+script = ExtResource("4_wi5vl")
 
-[node name="EnemySpawner22" parent="." index="27" instance=ExtResource("2_mt3si")]
-position = Vector2(1710, 259)
+[node name="RatEnemy9" parent="." index="26" instance=ExtResource("3_rr0ta")]
+position = Vector2(2891, 262)
+script = ExtResource("4_wi5vl")
 
-[node name="EnemySpawner23" parent="." index="28" instance=ExtResource("2_mt3si")]
-position = Vector2(1750, 403)
+[node name="RatEnemy10" parent="." index="27" instance=ExtResource("3_rr0ta")]
+position = Vector2(2875, 239)
+script = ExtResource("4_wi5vl")
 
-[node name="EnemySpawner24" parent="." index="29" instance=ExtResource("2_mt3si")]
-position = Vector2(1804, 203)
+[node name="RatEnemy11" parent="." index="28" instance=ExtResource("3_rr0ta")]
+position = Vector2(2843, 194)
+script = ExtResource("4_wi5vl")
 
-[node name="EnemySpawner25" parent="." index="30" instance=ExtResource("2_mt3si")]
-position = Vector2(1833, 41)
+[node name="RatEnemy12" parent="." index="29" instance=ExtResource("3_rr0ta")]
+position = Vector2(2888, 229)
+script = ExtResource("4_wi5vl")
 
-[node name="EnemySpawner26" parent="." index="31" instance=ExtResource("2_mt3si")]
-position = Vector2(1900, 186)
+[node name="RatEnemy13" parent="." index="30" instance=ExtResource("3_rr0ta")]
+position = Vector2(2917, 273)
+script = ExtResource("4_wi5vl")
 
-[node name="EnemySpawner27" parent="." index="32" instance=ExtResource("2_mt3si")]
-position = Vector2(1902, 325)
+[node name="RatEnemy14" parent="." index="31" instance=ExtResource("3_rr0ta")]
+position = Vector2(2901, 250)
+script = ExtResource("4_wi5vl")
 
-[node name="EnemySpawner28" parent="." index="33" instance=ExtResource("2_mt3si")]
-position = Vector2(1917, 469)
+[node name="RatEnemy15" parent="." index="32" instance=ExtResource("3_rr0ta")]
+position = Vector2(2869, 205)
+script = ExtResource("4_wi5vl")
 
-[node name="EnemySpawner29" parent="." index="34" instance=ExtResource("2_mt3si")]
-position = Vector2(1881, 571)
-
-[node name="EnemySpawner30" parent="." index="35" instance=ExtResource("2_mt3si")]
-position = Vector2(1835, 640)
-
-[node name="EnemySpawner31" parent="." index="36" instance=ExtResource("2_mt3si")]
-position = Vector2(1773, 740)
-
-[node name="EnemySpawner32" parent="." index="37" instance=ExtResource("2_mt3si")]
-position = Vector2(1824, 840)
-
-[node name="EnemySpawner33" parent="." index="38" instance=ExtResource("2_mt3si")]
-position = Vector2(1678, 864)
-
-[node name="EnemySpawner34" parent="." index="39" instance=ExtResource("2_mt3si")]
-position = Vector2(1522, 865)
-
-[node name="EnemySpawner35" parent="." index="40" instance=ExtResource("2_mt3si")]
-position = Vector2(1710, -72)
-
-[node name="EnemySpawner36" parent="." index="41" instance=ExtResource("2_mt3si")]
-position = Vector2(1585, -113)
-
-[node name="EnemySpawner37" parent="." index="42" instance=ExtResource("2_mt3si")]
-position = Vector2(1031, 363)
-basic_enemy_scene = ExtResource("3_rr0ta")
+[editable path="RatEnemy"]
+[editable path="RatEnemy2"]
+[editable path="RatEnemy3"]
+[editable path="RatEnemy4"]
+[editable path="RatEnemy5"]
+[editable path="RatEnemy6"]
+[editable path="RatEnemy7"]
+[editable path="RatEnemy8"]
+[editable path="RatEnemy9"]
+[editable path="RatEnemy10"]
+[editable path="RatEnemy11"]
+[editable path="RatEnemy12"]
+[editable path="RatEnemy13"]
+[editable path="RatEnemy14"]
+[editable path="RatEnemy15"]
