@@ -13,6 +13,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		load_level("2")
 	elif event.is_action_pressed("load_level_3"):
 		load_level("3")
+	elif event.is_action_pressed("load_level_4"):
+		load_level("4")
 		
 
 func load_level(level_id: String):
@@ -43,4 +45,4 @@ func load_next_level():
 	
 	
 func restart_game():
-	load_level(str(1))
+	load_level(str(2))

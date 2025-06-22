@@ -1,0 +1,415 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvbq87mu57cpy"]
+
+[ext_resource type="PackedScene" uid="uid://bx548ebid5r8x" path="res://environments/level.tscn" id="1_kfj5p"]
+[ext_resource type="PackedScene" uid="uid://bxuxq35mg87mn" path="res://entities/enemies/enemy_spawner.tscn" id="2_erjmx"]
+[ext_resource type="PackedScene" uid="uid://df2u7uixixjom" path="res://entities/enemies/cyclops_enemy_spawner.tscn" id="3_kfj5p"]
+
+[node name="Level1" instance=ExtResource("1_kfj5p")]
+
+[node name="GameCamera2D" parent="." index="1"]
+position = Vector2(480, 270)
+
+[node name="EnemySpawners" type="Node2D" parent="." index="5"]
+
+[node name="FinishLevelArea" parent="." index="7"]
+position = Vector2(2944, 332)
+
+[node name="EnemySpawner" parent="." index="9" instance=ExtResource("2_erjmx")]
+position = Vector2(1099, 323)
+
+[node name="EnemySpawner2" parent="." index="10" instance=ExtResource("2_erjmx")]
+position = Vector2(1136, 326)
+
+[node name="EnemySpawner3" parent="." index="11" instance=ExtResource("2_erjmx")]
+position = Vector2(1165, 323)
+
+[node name="EnemySpawner4" parent="." index="12" instance=ExtResource("2_erjmx")]
+position = Vector2(1202, 307)
+
+[node name="EnemySpawner5" parent="." index="13" instance=ExtResource("2_erjmx")]
+position = Vector2(1223, 281)
+
+[node name="EnemySpawner6" parent="." index="14" instance=ExtResource("2_erjmx")]
+position = Vector2(1242, 323)
+
+[node name="EnemySpawner7" parent="." index="15" instance=ExtResource("2_erjmx")]
+position = Vector2(1260, 355)
+
+[node name="EnemySpawner8" parent="." index="16" instance=ExtResource("2_erjmx")]
+position = Vector2(1291, 384)
+
+[node name="EnemySpawner9" parent="." index="17" instance=ExtResource("2_erjmx")]
+position = Vector2(1314, 342)
+
+[node name="EnemySpawner10" parent="." index="18" instance=ExtResource("2_erjmx")]
+position = Vector2(1361, 79)
+
+[node name="EnemySpawner11" parent="." index="19" instance=ExtResource("2_erjmx")]
+position = Vector2(1377, 623)
+
+[node name="EnemySpawner12" parent="." index="20" instance=ExtResource("2_erjmx")]
+position = Vector2(1478, 51)
+
+[node name="EnemySpawner13" parent="." index="21" instance=ExtResource("2_erjmx")]
+position = Vector2(1505, 11)
+
+[node name="EnemySpawner14" parent="." index="22" instance=ExtResource("2_erjmx")]
+position = Vector2(1553, 98)
+
+[node name="EnemySpawner15" parent="." index="23" instance=ExtResource("2_erjmx")]
+position = Vector2(1547, 265)
+
+[node name="EnemySpawner16" parent="." index="24" instance=ExtResource("2_erjmx")]
+position = Vector2(1441, 354)
+
+[node name="EnemySpawner17" parent="." index="25" instance=ExtResource("2_erjmx")]
+position = Vector2(1618, 539)
+
+[node name="EnemySpawner18" parent="." index="26" instance=ExtResource("2_erjmx")]
+position = Vector2(1500, 341)
+
+[node name="EnemySpawner19" parent="." index="27" instance=ExtResource("2_erjmx")]
+position = Vector2(1062, 325)
+
+[node name="EnemySpawner20" parent="." index="28" instance=ExtResource("2_erjmx")]
+position = Vector2(1767, 344)
+
+[node name="EnemySpawner21" parent="." index="29" instance=ExtResource("2_erjmx")]
+position = Vector2(1826, 344)
+
+[node name="EnemySpawner22" parent="." index="30" instance=ExtResource("2_erjmx")]
+position = Vector2(1649, 344)
+
+[node name="EnemySpawner23" parent="." index="31" instance=ExtResource("2_erjmx")]
+position = Vector2(1881, 271)
+
+[node name="EnemySpawner24" parent="." index="32" instance=ExtResource("2_erjmx")]
+position = Vector2(1942, 198)
+
+[node name="EnemySpawner25" parent="." index="33" instance=ExtResource("2_erjmx")]
+position = Vector2(1953, 127)
+
+[node name="EnemySpawner26" parent="." index="34" instance=ExtResource("2_erjmx")]
+position = Vector2(1920, 92)
+
+[node name="EnemySpawner27" parent="." index="35" instance=ExtResource("2_erjmx")]
+position = Vector2(1881, 40)
+
+[node name="EnemySpawner28" parent="." index="36" instance=ExtResource("2_erjmx")]
+position = Vector2(1858, 20)
+
+[node name="EnemySpawner29" parent="." index="37" instance=ExtResource("2_erjmx")]
+position = Vector2(1984, 160)
+
+[node name="EnemySpawner30" parent="." index="38" instance=ExtResource("2_erjmx")]
+position = Vector2(2057, 342)
+
+[node name="EnemySpawner33" parent="." index="39" instance=ExtResource("2_erjmx")]
+position = Vector2(2291, 302)
+
+[node name="EnemySpawner34" parent="." index="40" instance=ExtResource("2_erjmx")]
+position = Vector2(2320, 258)
+
+[node name="EnemySpawner35" parent="." index="41" instance=ExtResource("2_erjmx")]
+position = Vector2(2376, 367)
+
+[node name="EnemySpawner36" parent="." index="42" instance=ExtResource("2_erjmx")]
+position = Vector2(2381, 431)
+
+[node name="EnemySpawner37" parent="." index="43" instance=ExtResource("2_erjmx")]
+position = Vector2(2374, 490)
+
+[node name="EnemySpawner31" parent="." index="44" instance=ExtResource("2_erjmx")]
+position = Vector2(2138, 353)
+
+[node name="EnemySpawner32" parent="." index="45" instance=ExtResource("2_erjmx")]
+position = Vector2(2181, 357)
+
+[node name="EnemySpawner38" parent="." index="46" instance=ExtResource("2_erjmx")]
+position = Vector2(2483, 357)
+
+[node name="EnemySpawner39" parent="." index="47" instance=ExtResource("2_erjmx")]
+position = Vector2(2502, 317)
+
+[node name="EnemySpawner40" parent="." index="48" instance=ExtResource("2_erjmx")]
+position = Vector2(2558, 354)
+
+[node name="EnemySpawner41" parent="." index="49" instance=ExtResource("2_erjmx")]
+position = Vector2(2631, 379)
+
+[node name="EnemySpawner42" parent="." index="50" instance=ExtResource("2_erjmx")]
+position = Vector2(2675, 258)
+
+[node name="EnemySpawner43" parent="." index="51" instance=ExtResource("2_erjmx")]
+position = Vector2(2650, 72)
+
+[node name="EnemySpawner44" parent="." index="52" instance=ExtResource("2_erjmx")]
+position = Vector2(2679, 531)
+
+[node name="EnemySpawner45" parent="." index="53" instance=ExtResource("2_erjmx")]
+position = Vector2(2659, 620)
+
+[node name="EnemySpawner46" parent="." index="54" instance=ExtResource("2_erjmx")]
+position = Vector2(2698, 370)
+
+[node name="EnemySpawner47" parent="." index="55" instance=ExtResource("2_erjmx")]
+position = Vector2(2749, 341)
+
+[node name="EnemySpawner48" parent="." index="56" instance=ExtResource("2_erjmx")]
+position = Vector2(2790, 304)
+
+[node name="EnemySpawner49" parent="." index="57" instance=ExtResource("2_erjmx")]
+position = Vector2(2832, 241)
+
+[node name="EnemySpawner50" parent="." index="58" instance=ExtResource("2_erjmx")]
+position = Vector2(2863, 213)
+scale = Vector2(3.67037, 0.683619)
+
+[node name="EnemySpawner51" parent="." index="59" instance=ExtResource("2_erjmx")]
+position = Vector2(2863, 261)
+scale = Vector2(3.67037, 0.683619)
+
+[node name="EnemySpawner52" parent="." index="60" instance=ExtResource("2_erjmx")]
+position = Vector2(2832, 292)
+scale = Vector2(3.67037, 0.683619)
+
+[node name="EnemySpawner53" parent="." index="61" instance=ExtResource("2_erjmx")]
+position = Vector2(2820, 324)
+scale = Vector2(3.67037, 0.683619)
+
+[node name="EnemySpawner54" parent="." index="62" instance=ExtResource("2_erjmx")]
+position = Vector2(2796, 363)
+scale = Vector2(3.67037, 0.683619)
+
+[node name="EnemySpawner55" parent="." index="63" instance=ExtResource("2_erjmx")]
+position = Vector2(2759, 382)
+scale = Vector2(3.67037, 0.683619)
+
+[node name="EnemySpawner56" parent="." index="64" instance=ExtResource("2_erjmx")]
+position = Vector2(2759, 382)
+scale = Vector2(3.67037, 0.683619)
+
+[node name="EnemySpawner57" parent="." index="65" instance=ExtResource("2_erjmx")]
+position = Vector2(2885, 238)
+scale = Vector2(3.67037, 0.683619)
+
+[node name="EnemySpawner58" parent="." index="66" instance=ExtResource("2_erjmx")]
+position = Vector2(2908, 201)
+scale = Vector2(3.67037, 0.683619)
+
+[node name="EnemySpawner59" parent="." index="67" instance=ExtResource("2_erjmx")]
+position = Vector2(2895, 168)
+scale = Vector2(3.67037, 0.683619)
+
+[node name="EnemySpawner60" parent="." index="68" instance=ExtResource("2_erjmx")]
+position = Vector2(2954, 196)
+scale = Vector2(3.67037, 0.683619)
+
+[node name="EnemySpawner61" parent="." index="69" instance=ExtResource("2_erjmx")]
+position = Vector2(3009, 200)
+scale = Vector2(3.67037, 0.683619)
+
+[node name="EnemySpawner62" parent="." index="70" instance=ExtResource("2_erjmx")]
+position = Vector2(3098, 192)
+scale = Vector2(3.67037, 0.683619)
+
+[node name="EnemySpawner63" parent="." index="71" instance=ExtResource("2_erjmx")]
+position = Vector2(3057, 199)
+scale = Vector2(3.67037, 0.683619)
+
+[node name="EnemySpawner64" parent="." index="72" instance=ExtResource("2_erjmx")]
+position = Vector2(3148, 191)
+scale = Vector2(3.67037, 0.683619)
+
+[node name="EnemySpawner65" parent="." index="73" instance=ExtResource("2_erjmx")]
+position = Vector2(3096, 423)
+scale = Vector2(3.67037, 0.683619)
+
+[node name="EnemySpawner66" parent="." index="74" instance=ExtResource("2_erjmx")]
+position = Vector2(3124, 516)
+scale = Vector2(3.67037, 0.683619)
+
+[node name="EnemySpawner67" parent="." index="75" instance=ExtResource("2_erjmx")]
+position = Vector2(3093, 86)
+scale = Vector2(3.67037, 0.683619)
+
+[node name="EnemySpawner68" parent="." index="76" instance=ExtResource("2_erjmx")]
+position = Vector2(3148, 99)
+scale = Vector2(3.67037, 0.683619)
+
+[node name="CyclopsEnemySpawner" parent="." index="77" instance=ExtResource("3_kfj5p")]
+position = Vector2(1034, 328)
+
+[node name="CyclopsEnemySpawner11" parent="." index="78" instance=ExtResource("3_kfj5p")]
+position = Vector2(3221, 333)
+
+[node name="CyclopsEnemySpawner12" parent="." index="79" instance=ExtResource("3_kfj5p")]
+position = Vector2(3218, 274)
+
+[node name="CyclopsEnemySpawner13" parent="." index="80" instance=ExtResource("3_kfj5p")]
+position = Vector2(3217, 218)
+
+[node name="CyclopsEnemySpawner14" parent="." index="81" instance=ExtResource("3_kfj5p")]
+position = Vector2(3230, 399)
+
+[node name="CyclopsEnemySpawner15" parent="." index="82" instance=ExtResource("3_kfj5p")]
+position = Vector2(3193, 640)
+
+[node name="CyclopsEnemySpawner16" parent="." index="83" instance=ExtResource("3_kfj5p")]
+position = Vector2(3142, 25)
+
+[node name="CyclopsEnemySpawner17" parent="." index="84" instance=ExtResource("3_kfj5p")]
+position = Vector2(2564, 153)
+
+[node name="CyclopsEnemySpawner18" parent="." index="85" instance=ExtResource("3_kfj5p")]
+position = Vector2(2880, 71)
+
+[node name="CyclopsEnemySpawner19" parent="." index="86" instance=ExtResource("3_kfj5p")]
+position = Vector2(3248, 635)
+
+[node name="CyclopsEnemySpawner20" parent="." index="87" instance=ExtResource("3_kfj5p")]
+position = Vector2(2108, 377)
+
+[node name="CyclopsEnemySpawner21" parent="." index="88" instance=ExtResource("3_kfj5p")]
+position = Vector2(3132, 639)
+
+[node name="CyclopsEnemySpawner22" parent="." index="89" instance=ExtResource("3_kfj5p")]
+position = Vector2(3075, 25)
+
+[node name="CyclopsEnemySpawner23" parent="." index="90" instance=ExtResource("3_kfj5p")]
+position = Vector2(3095, 645)
+
+[node name="CyclopsEnemySpawner24" parent="." index="91" instance=ExtResource("3_kfj5p")]
+position = Vector2(2554, 416)
+
+[node name="CyclopsEnemySpawner28" parent="." index="92" instance=ExtResource("3_kfj5p")]
+position = Vector2(2343, 126)
+
+[node name="CyclopsEnemySpawner32" parent="." index="93" instance=ExtResource("3_kfj5p")]
+position = Vector2(2129, 158)
+
+[node name="CyclopsEnemySpawner33" parent="." index="94" instance=ExtResource("3_kfj5p")]
+position = Vector2(2137, 499)
+
+[node name="CyclopsEnemySpawner34" parent="." index="95" instance=ExtResource("3_kfj5p")]
+position = Vector2(1667, 160)
+
+[node name="CyclopsEnemySpawner35" parent="." index="96" instance=ExtResource("3_kfj5p")]
+position = Vector2(1808, 530)
+
+[node name="CyclopsEnemySpawner36" parent="." index="97" instance=ExtResource("3_kfj5p")]
+position = Vector2(2167, 229)
+
+[node name="CyclopsEnemySpawner37" parent="." index="98" instance=ExtResource("3_kfj5p")]
+position = Vector2(2220, 53)
+
+[node name="CyclopsEnemySpawner38" parent="." index="99" instance=ExtResource("3_kfj5p")]
+position = Vector2(2468, 512)
+
+[node name="CyclopsEnemySpawner39" parent="." index="100" instance=ExtResource("3_kfj5p")]
+position = Vector2(3235, 441)
+
+[node name="CyclopsEnemySpawner40" parent="." index="101" instance=ExtResource("3_kfj5p")]
+position = Vector2(3158, 538)
+
+[node name="CyclopsEnemySpawner41" parent="." index="102" instance=ExtResource("3_kfj5p")]
+position = Vector2(3041, 557)
+
+[node name="CyclopsEnemySpawner42" parent="." index="103" instance=ExtResource("3_kfj5p")]
+position = Vector2(3008, 597)
+
+[node name="CyclopsEnemySpawner43" parent="." index="104" instance=ExtResource("3_kfj5p")]
+position = Vector2(2955, 618)
+
+[node name="CyclopsEnemySpawner44" parent="." index="105" instance=ExtResource("3_kfj5p")]
+position = Vector2(3008, 473)
+
+[node name="CyclopsEnemySpawner45" parent="." index="106" instance=ExtResource("3_kfj5p")]
+position = Vector2(3045, 300)
+
+[node name="CyclopsEnemySpawner46" parent="." index="107" instance=ExtResource("3_kfj5p")]
+position = Vector2(3052, 388)
+
+[node name="CyclopsEnemySpawner47" parent="." index="108" instance=ExtResource("3_kfj5p")]
+position = Vector2(3125, 271)
+
+[node name="CyclopsEnemySpawner48" parent="." index="109" instance=ExtResource("3_kfj5p")]
+position = Vector2(2991, 240)
+
+[node name="CyclopsEnemySpawner49" parent="." index="110" instance=ExtResource("3_kfj5p")]
+position = Vector2(2983, 404)
+
+[node name="CyclopsEnemySpawner50" parent="." index="111" instance=ExtResource("3_kfj5p")]
+position = Vector2(3010, 130)
+
+[node name="CyclopsEnemySpawner51" parent="." index="112" instance=ExtResource("3_kfj5p")]
+position = Vector2(2945, 39)
+
+[node name="CyclopsEnemySpawner52" parent="." index="113" instance=ExtResource("3_kfj5p")]
+position = Vector2(3158, 152)
+
+[node name="CyclopsEnemySpawner53" parent="." index="114" instance=ExtResource("3_kfj5p")]
+position = Vector2(2945, 545)
+
+[node name="CyclopsEnemySpawner54" parent="." index="115" instance=ExtResource("3_kfj5p")]
+position = Vector2(2893, 616)
+
+[node name="CyclopsEnemySpawner55" parent="." index="116" instance=ExtResource("3_kfj5p")]
+position = Vector2(2854, 553)
+
+[node name="CyclopsEnemySpawner56" parent="." index="117" instance=ExtResource("3_kfj5p")]
+position = Vector2(2886, 464)
+
+[node name="CyclopsEnemySpawner57" parent="." index="118" instance=ExtResource("3_kfj5p")]
+position = Vector2(2886, 464)
+
+[node name="CyclopsEnemySpawner29" parent="." index="119" instance=ExtResource("3_kfj5p")]
+position = Vector2(2951, 105)
+
+[node name="CyclopsEnemySpawner31" parent="." index="120" instance=ExtResource("3_kfj5p")]
+position = Vector2(2872, 37)
+
+[node name="CyclopsEnemySpawner25" parent="." index="121" instance=ExtResource("3_kfj5p")]
+position = Vector2(2293, 160)
+
+[node name="CyclopsEnemySpawner26" parent="." index="122" instance=ExtResource("3_kfj5p")]
+position = Vector2(3183, 443)
+
+[node name="CyclopsEnemySpawner27" parent="." index="123" instance=ExtResource("3_kfj5p")]
+position = Vector2(3041, 70)
+
+[node name="CyclopsEnemySpawner30" parent="." index="124" instance=ExtResource("3_kfj5p")]
+position = Vector2(3125, 358)
+
+[node name="CyclopsEnemySpawner6" parent="." index="125" instance=ExtResource("3_kfj5p")]
+position = Vector2(2004, 349)
+
+[node name="CyclopsEnemySpawner8" parent="." index="126" instance=ExtResource("3_kfj5p")]
+position = Vector2(2417, 309)
+
+[node name="CyclopsEnemySpawner9" parent="." index="127" instance=ExtResource("3_kfj5p")]
+position = Vector2(2424, 246)
+
+[node name="CyclopsEnemySpawner10" parent="." index="128" instance=ExtResource("3_kfj5p")]
+position = Vector2(2396, 185)
+
+[node name="CyclopsEnemySpawner7" parent="." index="129" instance=ExtResource("3_kfj5p")]
+position = Vector2(2244, 348)
+
+[node name="CyclopsEnemySpawner2" parent="." index="130" instance=ExtResource("3_kfj5p")]
+position = Vector2(1392, 343)
+
+[node name="CyclopsEnemySpawner3" parent="." index="131" instance=ExtResource("3_kfj5p")]
+position = Vector2(1715, 347)
+
+[node name="CyclopsEnemySpawner4" parent="." index="132" instance=ExtResource("3_kfj5p")]
+position = Vector2(1719, 241)
+
+[node name="CyclopsEnemySpawner5" parent="." index="133" instance=ExtResource("3_kfj5p")]
+position = Vector2(1720, 466)
+
+[node name="CyclopsEnemySpawner58" parent="." index="134" instance=ExtResource("3_kfj5p")]
+position = Vector2(2847, 120)
+
+[node name="CyclopsEnemySpawner59" parent="." index="135" instance=ExtResource("3_kfj5p")]
+position = Vector2(2812, 53)
