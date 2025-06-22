@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://df2u7uixixjom"]
+
+[ext_resource type="PackedScene" uid="uid://bxuxq35mg87mn" path="res://entities/enemies/enemy_spawner.tscn" id="1_vvuao"]
+[ext_resource type="PackedScene" uid="uid://c06wu66egfrdl" path="res://entities/enemies/cyclops_enemy.tscn" id="2_fwxbt"]
+
+[node name="CyclopsEnemySpawner" instance=ExtResource("1_vvuao")]
+basic_enemy_scene = ExtResource("2_fwxbt")

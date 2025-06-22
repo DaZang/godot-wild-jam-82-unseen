@@ -68,26 +68,50 @@ position = Vector2(2644, 524)
 [node name="RatEnemySpawner20" parent="." index="27" instance=ExtResource("2_5a2ap")]
 position = Vector2(3057, 103)
 
-[node name="RatEnemySpawner21" parent="." index="28" instance=ExtResource("2_5a2ap")]
+[node name="RatEnemySpawner29" parent="." index="28" instance=ExtResource("2_5a2ap")]
+position = Vector2(3278, 292)
+
+[node name="RatEnemySpawner30" parent="." index="29" instance=ExtResource("2_5a2ap")]
+position = Vector2(3441, 296)
+
+[node name="RatEnemySpawner31" parent="." index="30" instance=ExtResource("2_5a2ap")]
+position = Vector2(2978, 311)
+
+[node name="RatEnemySpawner32" parent="." index="31" instance=ExtResource("2_5a2ap")]
+position = Vector2(2817, 315)
+
+[node name="RatEnemySpawner33" parent="." index="32" instance=ExtResource("2_5a2ap")]
+position = Vector2(2491, 306)
+
+[node name="RatEnemySpawner34" parent="." index="33" instance=ExtResource("2_5a2ap")]
+position = Vector2(2202, 291)
+
+[node name="RatEnemySpawner35" parent="." index="34" instance=ExtResource("2_5a2ap")]
+position = Vector2(3355, 211)
+
+[node name="RatEnemySpawner36" parent="." index="35" instance=ExtResource("2_5a2ap")]
+position = Vector2(3357, 112)
+
+[node name="RatEnemySpawner21" parent="." index="36" instance=ExtResource("2_5a2ap")]
 position = Vector2(3090, 169)
 
-[node name="RatEnemySpawner22" parent="." index="29" instance=ExtResource("2_5a2ap")]
+[node name="RatEnemySpawner22" parent="." index="37" instance=ExtResource("2_5a2ap")]
 position = Vector2(3129, 456)
 
-[node name="RatEnemySpawner23" parent="." index="30" instance=ExtResource("2_5a2ap")]
+[node name="RatEnemySpawner23" parent="." index="38" instance=ExtResource("2_5a2ap")]
 position = Vector2(3103, 540)
 
-[node name="RatEnemySpawner24" parent="." index="31" instance=ExtResource("2_5a2ap")]
+[node name="RatEnemySpawner24" parent="." index="39" instance=ExtResource("2_5a2ap")]
 position = Vector2(3532, 112)
 
-[node name="RatEnemySpawner25" parent="." index="32" instance=ExtResource("2_5a2ap")]
+[node name="RatEnemySpawner25" parent="." index="40" instance=ExtResource("2_5a2ap")]
 position = Vector2(3594, 220)
 
-[node name="RatEnemySpawner26" parent="." index="33" instance=ExtResource("2_5a2ap")]
+[node name="RatEnemySpawner26" parent="." index="41" instance=ExtResource("2_5a2ap")]
 position = Vector2(3637, 328)
 
-[node name="RatEnemySpawner27" parent="." index="34" instance=ExtResource("2_5a2ap")]
+[node name="RatEnemySpawner27" parent="." index="42" instance=ExtResource("2_5a2ap")]
 position = Vector2(3607, 453)
 
-[node name="RatEnemySpawner28" parent="." index="35" instance=ExtResource("2_5a2ap")]
+[node name="RatEnemySpawner28" parent="." index="43" instance=ExtResource("2_5a2ap")]
 position = Vector2(3548, 561)

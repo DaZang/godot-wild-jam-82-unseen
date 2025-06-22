@@ -13,7 +13,7 @@ position = Vector2(480, 270)
 [node name="EnemySpawners" type="Node2D" parent="." index="5"]
 
 [node name="FinishLevelArea" parent="." index="7"]
-position = Vector2(2996, 332)
+position = Vector2(2944, 332)
 
 [node name="Tutorial" type="Node2D" parent="." index="9"]
 
@@ -50,7 +50,9 @@ offset_right = 1562.0
 offset_bottom = 583.0
 theme = ExtResource("2_mt3si")
 text = "To cast a fire spell:
-Click and drag left mouse button."
+Click hold and drag 
+left mouse button
+for 1 second"
 
 [node name="TutorialLabel4" type="Label" parent="." index="13"]
 offset_left = 1705.0
@@ -97,9 +99,9 @@ your damage mutliplier is lost.
 "
 
 [node name="TutorialLabel8" type="Label" parent="." index="17"]
-offset_left = 2923.0
+offset_left = 2893.0
 offset_top = 357.0
-offset_right = 3137.0
+offset_right = 3107.0
 offset_bottom = 429.0
 theme = ExtResource("2_mt3si")
 theme_override_font_sizes/font_size = 32
